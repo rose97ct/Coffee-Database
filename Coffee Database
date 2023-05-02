@@ -1,0 +1,26 @@
+--create a coffee store database.
+CREATE TABLE coffee(ID INTEGER PRIMARY KEY, ROAST TEXT, BRAND TEXT, AISLE INTEGER, PRICE INTEGER);
+
+
+INSERT INTO coffee VALUES (1, "Dark Roast", "Starbucks", 5, 14);
+INSERT INTO coffee VALUES (2, "Light Roast", "Starbucks", 3, 10);
+INSERT INTO coffee VALUES (3, "Medium Roast ", "Starbucks", 10, 12);
+INSERT INTO coffee VALUES (4, "Christmas Blend Roast", "Starbucks", 2, 20);
+INSERT INTO coffee VALUES (5, "Dark Roast", "Starbucks", 8, 14);
+INSERT INTO coffee VALUES (6, "Light Roast", "Starbucks", 5, 10);
+INSERT INTO coffee VALUES (7, "Medium Roast", "Starbucks",7, 12);
+INSERT INTO coffee VALUES (8, "Light roast", "Starbucks", 11, 10);
+INSERT INTO coffee VALUES (9, "Dark Roast", "Starbucks", 4, 14);
+INSERT INTO coffee VALUES (10, "Light Roast", "Starbucks", 2, 10);
+INSERT INTO coffee VALUES (11, "Medium Roast", "Starbucks", 3, 14);
+INSERT INTO coffee VALUES (12, "Christmas Blend Light Roast", "Starbucks", 2, 20);
+INSERT INTO coffee VALUES (13, "Christmas Blend Light Roast", "Starbucks", 2, 20);
+INSERT INTO coffee VALUES (14, "Dark Roast", "Starbucks", 2, 14);
+INSERT INTO coffee VALUES (15, "Christmas Blend Light Roast", "Starbucks", 3, 20);
+
+--display the database ordered by aisle.
+SELECT * FROM coffee ORDER BY AISLE; 
+--display total profit from coffee in store
+SELECT SUM (PRICE) FROM coffee;
+--display coffee where the price is less than 14 dollars and order it by aisle number
+SELECT * FROM coffee WHERE PRICE < 14 ORDER BY AISLE;
